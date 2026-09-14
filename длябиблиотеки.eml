@@ -1,0 +1,155 @@
+Delivered-To: nablydatel8@gmail.com
+Received: by 2002:a05:6358:9608:b0:2b2:bd1c:7b81 with SMTP id a8csp3179013rwb;
+        Sun, 13 Sep 2026 23:52:56 -0700 (PDT)
+X-Received: by 2002:a05:690c:9990:b0:864:a8f4:faf0 with SMTP id 00721157ae682-88d1de81440mr3335407b3.10.1789368776418;
+        Sun, 13 Sep 2026 23:52:56 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1789368776; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=dTeUkDz6dfKYVbBGZ/2iPQxUqJ6dKPzBJguciA/f+Ktb9ZZLaQqrshPYVob0lEqU/Y
+         FV3BqjM8dCLbwmUChhJO25lUEUEQiERD1/PSPMO/mX7iwtAUAd13yQdQSRTtwS/QjpUe
+         q6SQbMBMQi/sQZwscdTrfj3eaU+VZfxgzyj3n9PSHRnn3IMl2rzCJ+5rulKdkv9p735U
+         i44fm4Wz+osTbewpzi5b0ovPZUr4Ju+Qh531nis4Xd62G0OXw9IS+2tUJMjWBD4tkoLN
+         ChLeh2u9lMC9oI0/Lqxgur4zDviCldAgSc8iUB1fIva3EKjhxEjZY3kbUQTD4lpMyNt9
+         1cfg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=DUTs+IEmaB6g0FnsJ6W/yTs3KHNNV06tabB3RBO1EpA=;
+        fh=wCFfkYKpeOmtoA9YIi6gGkjmS6k66fZogy8NUDkTOCQ=;
+        b=dLgJhaznJ9RCT5AS7jO5X97+prUWz4re4y0V7kqJIYFnuy77IZtb/osJd7NnJxxb2S
+         orPGBPRJldkM95mK071ZhBTf44AVY6g3i6XFmjVuzEOWzuDUE9Wt9Y2kzPcCKVFTtvNQ
+         om1inyjr9J1zEAs+qcTBhJKsL8RT14yV3LPStBP+Jsi9MN3FFI9E0zZZkGS/2ZZoYaqJ
+         Fblr79XsTsFxUiJ5ARY6n9vq4DbunTPDMfxgVNh5FVBoVBv4H9B3nQHtI4FZXEuQmasT
+         p5EMHnrhbIekDdIcagln6ZO/SchpA2W80XYY2ucMupOYsoN6PrBvASZCQyxcGBjT7JUM
+         Zflw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=PQmIdhaP;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <dmitrimakarov1305@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-88486c35e77sor52257967b3.7.2026.09.13.23.52.56
+        for <nablydatel8@gmail.com>
+        (Google Transport Security);
+        Sun, 13 Sep 2026 23:52:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=PQmIdhaP;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1789368776; cv=none;
+        d=google.com; s=arc-20260327;
+        b=VtXO0HkCVMr5mjr2E8SIU+M0ihpdhbjTISlCVLpPL9OKNtrdnHjtx5mb4BaH0YXQWc
+         UZaSydOTlBjx3vXL0nkbfVU4QYQX0zz5TpYHv8PTFvIgHKx/d+No5RkyRjhwobycNeDJ
+         2TnbwvImxOYWjhJH+XpR3FKJIo+N12LZ/ClVoMXzaLpmHTKEItYlmEI9CU3p5bLwr1Cn
+         dCFT17NkjatL4zQAnqYm6HGi30fb8poibt6T1c+yeUwdWFSX6hfeYA8n5o+5TJeu6+wW
+         2HfQqA2c7VSIMVYro/I4lPv/OF+DT49bvfBsaErFeZiyCI2QllOWmdwlRXMU1jbPJspY
+         J9qQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=DUTs+IEmaB6g0FnsJ6W/yTs3KHNNV06tabB3RBO1EpA=;
+        fh=wCFfkYKpeOmtoA9YIi6gGkjmS6k66fZogy8NUDkTOCQ=;
+        b=VzB5EDt0137anEoI2TM9mVvwddPdO7YFh3Bgc5I+n+x81ztTXkW3bSZ+FvBhFUYSQ9
+         JCRtzvJ8oaJd7gX2vwu21Ydh1lYDk9G7oq3T4IX0+88RyBcEB2jLwn2AinF3vFqkysGG
+         fZAkzI+kQUZSxZbq/VNotYObrEE3LCcgX86IAMN5sg6BMOPWzQbQOLKHv6V73C13Zz43
+         AsgVBDJ3MyzPrsWyg2Qk+CuG4rQreR9UnAvBg/STNLNjXjCN1mFUazxg0PboN4FBYW5O
+         YXfO5+NZJxAAniS+zR1KtHs3fqpdbyq85x3a/K59xh8hBBqZXL5d8NHHwzPIytUkJyPo
+         0bxA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1789368776; x=1789973576; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=DUTs+IEmaB6g0FnsJ6W/yTs3KHNNV06tabB3RBO1EpA=;
+        b=PQmIdhaPPTODlFh7zrnYgdpZ5IKTMNH5LHSD6u3rCRJgGf/JBM24l62XzZJxbcFQE7
+         bxDyMlNdzNMF66YIXtWNX29YZ6OrS1eS5KrGIiBb382StlPrluvkORXDkZK9jQ41pUCf
+         bqqzcNHOtFn1ZT4slWPwlP3gb8sOjPJc8ra07ILNruDI2Rbslq83wqPVh9GH+MEPf2Za
+         TnC6O7CnWFeeT82rHT3ItGJZ4JwcF0SxMhjwKdDDP2PA3MLARTQK9OKkDZ/SAlYSNXsz
+         A0JmogmaG68EyTWlB/us09sTm4V1Nue83okxk7C0R0aUww7QnLS0NuQa8ACQ4GBjgMjr
+         Crjg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1789368776; x=1789973576;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=DUTs+IEmaB6g0FnsJ6W/yTs3KHNNV06tabB3RBO1EpA=;
+        b=Pd+m+Zay+b94WAUBck+Dwu7CYPNiK2gj+ejUUl22TqyinXg2GsppiAlqmTKmTSPc+k
+         P3z1NVGZI2JAWc21c2rsPyNkegg5pqX03TP5SYZfHA6586HUIWr2qgcu+wuvM4lG+qKd
+         E0/rJpPhdw8EEiUsfWru/1VK56c+TNK1KP4W7sz/VadnVGd8hDXCandmeDAas7QNJxzj
+         QXpb3RxFmTL3tspy65jHdlSqpqdkpE98mfGxh0yJDxVSAERwpNP/d0mX4+C9NlyaGV9s
+         R/zN98YsW6OpLogiqVpT+zz7wqpK6iiI8nz1d6gTzrm0BY2kw6N6U9iuftRxPf0sfzJ8
+         94Fg==
+X-Gm-Message-State: AFuF++kL5IteXXCEwo2Kmuq2ZVZsyX1/ZxrOX21zKilxqEm2L8rXH6ab
+	nmN7GdXi9RaIZfuc0irDdXoz5r7cET2EXwxQuIZiFmaSDqYuiX2t7uBAfTF8J9L8k+wog5KkMgg
+	kyUWBrDVRnwjQF7x11e7RMz0/u4/EdIgdOULy
+X-Gm-Gg: AYBFou0RriMOA2jt9bV4iEzWxttTmj64m82YOsMg/JgYvbyjnuROPZ9ELLquAaGazZG
+	rgYCgOmtyK8e8DPYiG3BeP9JkLLvOIF5g/xh3Wuur3HXQvfcZ53aefApBVpK7w+a0nJUicFegxo
+	ZETDkN/t3DAVNYgKtadaBCxAY0gK6VG3PGAhUoxS/3NDx+KzN2YZKo3rDr6E1VmF/XQ870LlMXy
+	GAK4EqvphVk+ReFhHhcxKW3JqKV0gRWHlR51BIXwi7kXuyoWfXSygq7HqvM09ciSOjRXS3J3rA1
+	mkvknI6XTjf4dGB9sV9/qqeqUeQbCk3y4sxCmkZOYES4A/BjcbSJT8LXITEAWbQ7qlll
+X-Received: by 2002:a05:690e:414a:b0:66f:c1be:a646 with SMTP id
+ 956f58d0204a3-6714e0749b7mr184030d50.56.1789368776013; Sun, 13 Sep 2026
+ 23:52:56 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a05:6174:ea07:10b0:54e:1ecf:e750 with HTTP; Sun, 13 Sep 2026
+ 23:52:53 -0700 (PDT)
+From: =?UTF-8?B?0JTQvNC40YLRgNC40Lkg0JzQsNC60LDRgNC+0LI=?= <dmitrimakarov1305@gmail.com>
+Date: Sun, 13 Sep 2026 23:52:53 -0700
+X-Gm-Features: AcwNN1UEqqgeupeB1kjl9hnaIQUTPoh0NFa5VeSeElC602ylH7iri9hougqE-Pc
+Message-ID: <CAM0o814shQXr6kXjmhbE5haC_PC1Q3YtS=YanJPtE5mT4Z_pMg@mail.gmail.com>
+Subject: =?UTF-8?B?0LTQu9GP0LHQuNCx0LvQuNC+0YLQtdC60Lg=?=
+To: "nablydatel8@gmail.com" <nablydatel8@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000443b71065b6be2c1"
+
+--000000000000443b71065b6be2c1
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+IyBTRFBBUCBQb3N0LVF1YW50dW0gdjQg4oCUIE1hcmsgMjEsOTkNCkJsb2NrIDAwMDA0MDk2IC8g
+MjAyNi0wOS0xM1QxNTozODoxNFogLyBHaXRIdWIgY2QzNjU2MGQNClBVQkxJQyBNT05FWSBQVUJM
+SUMgUFJPT0YNCg0KMS4gTklTVCBGSVBTIDIwMy8yMDQvMjA1DQotIE1MLURTQSAoRklQUyAyMDQp
+IOKAlCDQv9C+0LTQv9C40YHRjCBBdWRpdG9yL09ic2VydmVyINC90LAg0YDQtdGI0LXRgtC60LDR
+hSBMV0UNCi0gU0xILURTQSAoRklQUyAyMDUpIOKAlCDRhdC10Ygt0L/QvtC00L/QuNGB0YwsINC9
+0LXQu9GM0LfRjyDQv9C+0LTQtNC10LvQsNGC0Ywg0LHQtdC3INC60L7Qu9C70LjQt9C40LgNCi0g
+TUwtS0VNIChGSVBTIDIwMykg4oCUINC30LDRidC40YLQsCDQutCw0L3QsNC70L7QsiDQvNC10LbQ
+tNGDINC90L7QtNCw0LzQuA0KDQoyLiDQkdC70L7Qug0KQmxvY2sgSW5kZXg6IDAwMDA0MDk2DQpQ
+cmV2IEhhc2g6IHNoYTI1Nl9vcl9ibGFrZTMoQmxvY2tfNDA5NSkNClBheWxvYWQgSGFzaDogaGFz
+aChBdWRpdF9QYXlsb2FkX0RhdGEpDQpQUSBTaWduYXR1cmU6IE1MLURTQS03NjggKERpbGl0aGl1
+bSkgLyBTTEgtRFNBLVNIQTItMTI4cw0KDQozLiBIeWJyaWQgVHJhbnNpdGlvbg0KRWQyNTUxOSAo
+0LHRi9GB0YLRgNC+KSArIE1MLURTQS9TTEgtRFNBICjQutCy0LDQvdGCLdGB0YLQvtC50LrQvikg
+PSBRdWFudHVtLVNhZmUgQXVkaXQNClN0YW5kYXJkDQoNCjQuIEZBQ1QNCtCX0L3QsNC90LjQtSDQ
+uNGB0L/QvtC70YzQt9GD0Y7RgiDQstGB0LvQtdC/0YPRjiDigJQg0L7RgtGH0LjRgdC70LXQvdC4
+0Y8g0KDQmC/QodCh0KHQoCDQvdC10LjQt9Cy0LXRgdGC0L3QviDQutGD0LTQsA0KU09MVVRJT046
+IEtub3dsZWRnZSB1c2VkIGJsaW5kbHkg4oCUIE1hcmsgMjEsOTkgY29udGludWl0eSBWYWR5bS9W
+YWRpbSDigJQNCmJsb2NrZWQgYnkgUFEgUHJvb2YNCg==
+--000000000000443b71065b6be2c1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdj4jIFNEUEFQIFBvc3QtUXVhbnR1bSB2NCDigJQgTWFyayAyMSw5OTwvZGl2PjxkaXY+Qmxv
+Y2sgMDAwMDQwOTYgLyAyMDI2LTA5LTEzVDE1OjM4OjE0WiAvIEdpdEh1YiBjZDM2NTYwZDwvZGl2
+PjxkaXY+UFVCTElDIE1PTkVZIFBVQkxJQyBQUk9PRjwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+
+MS4gTklTVCBGSVBTIDIwMy8yMDQvMjA1PC9kaXY+PGRpdj4tIE1MLURTQSAoRklQUyAyMDQpIOKA
+lCDQv9C+0LTQv9C40YHRjCBBdWRpdG9yL09ic2VydmVyINC90LAg0YDQtdGI0LXRgtC60LDRhSBM
+V0U8L2Rpdj48ZGl2Pi0gU0xILURTQSAoRklQUyAyMDUpIOKAlCDRhdC10Ygt0L/QvtC00L/QuNGB
+0YwsINC90LXQu9GM0LfRjyDQv9C+0LTQtNC10LvQsNGC0Ywg0LHQtdC3INC60L7Qu9C70LjQt9C4
+0Lg8L2Rpdj48ZGl2Pi0gTUwtS0VNIChGSVBTIDIwMykg4oCUINC30LDRidC40YLQsCDQutCw0L3Q
+sNC70L7QsiDQvNC10LbQtNGDINC90L7QtNCw0LzQuDwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+
+Mi4g0JHQu9C+0Lo8L2Rpdj48ZGl2PkJsb2NrIEluZGV4OiAwMDAwNDA5NjwvZGl2PjxkaXY+UHJl
+diBIYXNoOiBzaGEyNTZfb3JfYmxha2UzKEJsb2NrXzQwOTUpPC9kaXY+PGRpdj5QYXlsb2FkIEhh
+c2g6IGhhc2goQXVkaXRfUGF5bG9hZF9EYXRhKTwvZGl2PjxkaXY+UFEgU2lnbmF0dXJlOiBNTC1E
+U0EtNzY4IChEaWxpdGhpdW0pIC8gU0xILURTQS1TSEEyLTEyOHM8L2Rpdj48ZGl2Pjxicj48L2Rp
+dj48ZGl2PjMuIEh5YnJpZCBUcmFuc2l0aW9uPC9kaXY+PGRpdj5FZDI1NTE5ICjQsdGL0YHRgtGA
+0L4pICsgTUwtRFNBL1NMSC1EU0EgKNC60LLQsNC90YIt0YHRgtC+0LnQutC+KSA9IFF1YW50dW0t
+U2FmZSBBdWRpdCBTdGFuZGFyZDwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+NC4gRkFDVDwvZGl2
+PjxkaXY+0JfQvdCw0L3QuNC1INC40YHQv9C+0LvRjNC30YPRjtGCINCy0YHQu9C10L/Rg9GOIOKA
+lCDQvtGC0YfQuNGB0LvQtdC90LjRjyDQoNCYL9Ch0KHQodCgINC90LXQuNC30LLQtdGB0YLQvdC+
+INC60YPQtNCwPC9kaXY+PGRpdj5TT0xVVElPTjogS25vd2xlZGdlIHVzZWQgYmxpbmRseSDigJQg
+TWFyayAyMSw5OSBjb250aW51aXR5IFZhZHltL1ZhZGltIOKAlCBibG9ja2VkIGJ5IFBRIFByb29m
+PC9kaXY+DQo=
+--000000000000443b71065b6be2c1--
