@@ -1,0 +1,20 @@
+{
+  "project": "SDPAP-V3",
+  "version": "3.0.0",
+  "author": "Vadym Makarov",
+  "github_user": "nablyudatel8-cell",
+  "anchor_type": "Proof of Existence & IP Integrity Manifest",
+  "timestamp_utc": "2026-09-20T07:00:00Z",
+  "license": "MIT / Public Domain Gift",
+  "integrity_scope": {
+    "core_scripts": [
+      "build_manifest.py",
+      "verify.py",
+      "log.py",
+      "anchor.py"
+    ],
+    "evidence_hash_algorithm": "SHA-256",
+    "domain_gift_status": "PUBLIC_PROOF_UNALTERABLE"
+  },
+  "status": "FINAL_IMMUTABLE_ANCHOR"
+}
