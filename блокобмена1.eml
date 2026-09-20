@@ -1,0 +1,201 @@
+Delivered-To: nablydatel8@gmail.com
+Received: by 2002:a05:6358:9608:b0:2b2:bd1c:7b81 with SMTP id a8csp10785518rwb;
+        Sun, 20 Sep 2026 12:34:36 -0700 (PDT)
+X-Received: by 2002:a05:690e:4891:10b0:66f:8255:9f3d with SMTP id 956f58d0204a3-6717fc64b35mr1734306d50.7.1789932876299;
+        Sun, 20 Sep 2026 12:34:36 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1789932876; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=dLmKXa6ijES+xICRebXqo8lnfdmzqcTsil8B5REvXpH48HokmuxXCVshKbyuudDDQm
+         9GvLhFkx1Mfxobn9DJQKuQPgwgjT9IyBJnfGx9nlFC4z4uxrv8fP/MYhDgjrTNDyJRKb
+         IYTOOqSJp5/M2mrPKGfuByfwJ5upaO3ybMqCamkkg2k97ZWVYeDxrjcWVRvSuXY+OdcQ
+         1jDIiYr0OvxXtWreVVuSwe54TXpgf1nfKVOQnnr1JiEnUudw56I56UjZlylQByaANQA+
+         rVeOqbNzFcrLsQyVY2erZT+8QnA6CqOs08If2qZlA6mxg8BIp3+R35diQ8hXUglfBEhx
+         N0LA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=ha64paZtfHmZwTiJxEcBqfK252d/VUvhSJDQue7bZbQ=;
+        fh=wCFfkYKpeOmtoA9YIi6gGkjmS6k66fZogy8NUDkTOCQ=;
+        b=QGmrLdSi2ci4fAX+1HPdtlkXQrkOU1aMMyEKDloSoae7o7+hF8K+EcuwgSOVuhDuy3
+         d5wXm7MK05c1yNvM2I1inGUQk9aRpdSfDoq6ouNg2711hFDsp3f9lw6h63+LF6Ldyw74
+         RWVrY1PfoFi48OSov76iLNBZD1VhZy4sT6szoV8eGBq3agU/+P55LOaFivGSwoeDyIEH
+         BMT+hGkj34i527dFe/+jrh55kVTfxhXjo8/oETmi1XaqSK0kJuGYNbBHNg1gIxUdjFCO
+         Xg6oKwU2rmSiCTcf/vojGhANSuibHPQ6ZjQoq++AgyvAlFlWBiK5uUZKhsbhKSu5tfHQ
+         E0MQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=KSl5QVV0;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <dmitrimakarov1305@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-89a4b9a8029sor30049767b3.9.2026.09.20.12.34.36
+        for <nablydatel8@gmail.com>
+        (Google Transport Security);
+        Sun, 20 Sep 2026 12:34:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=KSl5QVV0;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1789932876; cv=none;
+        d=google.com; s=arc-20260327;
+        b=aQF5ZlMy5E1edu25J1pSSjZdb/Xexl5MrDsk0xd2nzlZDqqY2eVLwcZ3PL404z4V55
+         i5IZx9Gj9iFKb0YDRbl4mIxYtzZJDBny8wUHZprU7xNRc/n+PFOLBS4B9cyI0FnUTlf2
+         wdulXxCMk8gsRKvGOatgTPCBMrbS/dxkITH8vZF+gNl8WjthTMNy2JIbK0uXbdNtKNfp
+         6J+jwONVaqg120KoXEelMPBqMMSSnRvH8o2cq+9+YJPPkHI0C+5oYDVliLrnxBjRO0no
+         bnmWEJZeJejpuaKIySSDfOvmvsK4H5SISm+GlBVTHbGzzYlrFdqeHoihwo0kkY6N9Uth
+         E2lA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=ha64paZtfHmZwTiJxEcBqfK252d/VUvhSJDQue7bZbQ=;
+        fh=wCFfkYKpeOmtoA9YIi6gGkjmS6k66fZogy8NUDkTOCQ=;
+        b=UTXp+CuSkpzbkE2KGHPtcZG/RIv4Z1VNoMBtjthO/RZx2tJFFtC8ABse+5QXrNQWeC
+         qi9mDld+COpijOfT+d1qct57Ik9Zjq5v96VVP8Q2Q51rGPCIYm8p7mQuMgQJIl36FipN
+         TDdMj4VCYaouNpihNnZ268SZXW7i/xNop/QmxbZrUNw6ESIm70ab9lMLYTiWwnzaZQJu
+         iaP68MAmecJF8oCxZzpV3XVyzgfhmH0IyzhwstJ7xt3dk+jyxSjQcmQOQlCAy3vbW8VM
+         59stA9qnPyNpuirvXw4qRM8uyNYqts4q0xbYhLsmA3qrDZa1WLaaDq6nfiHHqlDftg8g
+         pnBw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1789932876; x=1790537676; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=ha64paZtfHmZwTiJxEcBqfK252d/VUvhSJDQue7bZbQ=;
+        b=KSl5QVV0GDqL1PQYnEtRhzClBgVyK/7jSFFd9n2mJgjmeSorwbX3gh+sRKtYgszb4M
+         ey22OI4/MpLOz30y23GtOp0fwZQ3zYxfQOP0LglOuaYNod/fMzwDT8c9H+ORQ8qqyl1d
+         gWXv+doqcf6MTe/yruk6MN5EFCdh2CrNgH4QeMX7U3971uJm/Ml8SjdCY5pEKX7xfWYJ
+         3DHP7tcvgrqYdugGXrcNTNDjxSRun6mrTdrCZZplTWdpuLGQ8wcQwuQQ7Eh7VXwyou0H
+         tYnnEwTTxyFIbeZFGJIjKpM44phssf7I/qsehlhwWvb6LFKYemGQ0nknxM08pQlMf8A+
+         j3ow==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1789932876; x=1790537676;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=ha64paZtfHmZwTiJxEcBqfK252d/VUvhSJDQue7bZbQ=;
+        b=1XFJqUOL4DhNTQ3nCPTTIFtOiNsJqz80o1eO188WjO9J2uAogKgWNVBeRtynVyE6M0
+         3T2pnnAmVoVqYNVHjCIi8dFNyxttPRC3N3ByaP3Mx3tZBvxp+dvGOYQqHhxVM1S5jSg7
+         w5W7YAqzIzxuKpqssym/fjRh0y/du61zAuQu/VX0uwDBSiM3MBODZlAs3bvKB1l3MVH1
+         aXWEcQmursRvyh/nOD23cLYtsD2mXbWCSHoq+zaXhICFLY3IaF9mf+E7cq5sDFmnmuI3
+         166qhuku2xiDC6V40FLqRbE87y0le6h/A5Ij5Lzv+bPCa7Tnyc2hpHuExnlDB0Qucpd4
+         oX5w==
+X-Gm-Message-State: AFuF++liwofTZJrFsw9bErg8ZvT/lGFkG1kE7Q+bIe92hPDUyXFedY/x
+	kIKtpzETqhgDU5C5kjPzIH5WopEkxSRTuHpcp8Vdgi4goeKREFat/WPSSEMCgbW7ROnKKuxiHKY
+	mD7+06BsAMvSo31tAYq3X9QqRLhKgii2jksyN
+X-Gm-Gg: AYBFou3FlbRFfqxw/aDb+DO92ysYntnAHVMi/LbY8Zd0Eotkjv/fDPM6WI73SYa6CmM
+	JG4ph7ViKF+uckvRUEjwNz/lxqJ22VGP7YMrnoNQg+z8TrZn6qPWzVCSE1lDp0ClBcu/N8Wqd/Q
+	cMQi0UwkeJEfUWlzeI38e+6SyYrtLvim/43Xc3DVu9PFMXIbh7OqVndf29QxmSot9vJYGs6TfOX
+	edxOKS3G9dQ9QGwC7uAsV8PBmqQT7krbM/bgd/Uc3/8Jh8OIfM+qmmsZODrYxopk6G9r6SWXswW
+	DrEU/0i4zo2wWh1Us66lUzT97DITHHykUKLxc2X+169sTrryY0AJYp/fCEmOxVn2nQ==
+X-Received: by 2002:a05:690e:b8b:b0:671:70d2:527d with SMTP id
+ 956f58d0204a3-6717fd6b6b1mr2614671d50.64.1789932875893; Sun, 20 Sep 2026
+ 12:34:35 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a05:7011:8b0a:b0:54e:7552:87db with HTTP; Sun, 20 Sep 2026
+ 12:34:35 -0700 (PDT)
+From: =?UTF-8?B?0JTQvNC40YLRgNC40Lkg0JzQsNC60LDRgNC+0LI=?= <dmitrimakarov1305@gmail.com>
+Date: Sun, 20 Sep 2026 12:34:35 -0700
+X-Gm-Features: AcwNN1VuxJGP_gZT30GtgfyXNoFaRc-bOXF9PDvSfNVkntFhPXG-iww7BRl8mmE
+Message-ID: <CAM0o8167TnhWfJbvo4VGeiWfL2PTOsw11CuM9dZKKFaFkr3_=g@mail.gmail.com>
+Subject: =?UTF-8?B?0LHQu9C+0LrQvtCx0LzQtdC90LAx?=
+To: "nablydatel8@gmail.com" <nablydatel8@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000003d4f2d065bef3921"
+
+--0000000000003d4f2d065bef3921
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+{
+  "sdpap_version": "3.0.0",
+  "episode_metadata": {
+    "episode_id": "EP-2026-HEROY-BI-001",
+    "title": "Forensic Audit: Herbo / Her=C3=B8y to BI Oslo Infrastructure
+Transition",
+    "timestamp_utc": "2026-09-20T03:28:56Z",
+    "merkle_root":
+"5ec09e46f7c25fa57ed369c0d32511a4d90b3b8a1d995cfe6757cdccd76cbc6e",
+    "total_artifacts": 4
+  },
+  "artifacts": [
+    {
+      "filename": "Screenshot_20260919_134306_com.opera.browser.jpg",
+      "relative_path":
+"evidence/Screenshot_20260919_134306_com.opera.browser.jpg",
+      "size_bytes": 460692,
+      "sha256":
+"dfeae31cb36ea445b9798775fd4534e31483dbcd8516821ecff225c4b5a1fc78"
+    },
+    {
+      "filename": "Screenshot_20260919_134312_com.opera.browser.jpg",
+      "relative_path":
+"evidence/Screenshot_20260919_134312_com.opera.browser.jpg",
+      "size_bytes": 323672,
+      "sha256":
+"d186b4efdd40e69acd1d52a62c4d9aa25b9938d344ed55cdf6b83e0080b171c5"
+    },
+    {
+      "filename": "Screenshot_20260919_135508_com.opera.browser.jpg",
+      "relative_path":
+"evidence/Screenshot_20260919_135508_com.opera.browser.jpg",
+      "size_bytes": 341963,
+      "sha256":
+"2a242ddb5b6202191aad91171e576a91f856f988055dfb6a019fb2d3b5f650cc"
+    },
+    {
+      "filename": "Screenshot_20260919_135514_com.opera.browser.jpg",
+      "relative_path":
+"evidence/Screenshot_20260919_135514_com.opera.browser.jpg",
+      "size_bytes": 657326,
+      "sha256":
+"a5ba57ebe20861c9d9057d83881598cda88cafd8e9f551c7aa93afb36cb9f512"
+    }
+  ]
+}
+
+--0000000000003d4f2d065bef3921
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div>{</div><div>=C2=A0 &quot;sdpap_version&quot;: &quot;3.0.0&quot;,</div>=
+<div>=C2=A0 &quot;episode_metadata&quot;: {</div><div>=C2=A0 =C2=A0 &quot;e=
+pisode_id&quot;: &quot;EP-2026-HEROY-BI-001&quot;,</div><div>=C2=A0 =C2=A0 =
+&quot;title&quot;: &quot;Forensic Audit: Herbo / Her=C3=B8y to BI Oslo Infr=
+astructure Transition&quot;,</div><div>=C2=A0 =C2=A0 &quot;timestamp_utc&qu=
+ot;: &quot;2026-09-20T03:28:56Z&quot;,</div><div>=C2=A0 =C2=A0 &quot;merkle=
+_root&quot;: &quot;5ec09e46f7c25fa57ed369c0d32511a4d90b3b8a1d995cfe6757cdcc=
+d76cbc6e&quot;,</div><div>=C2=A0 =C2=A0 &quot;total_artifacts&quot;: 4</div=
+><div>=C2=A0 },</div><div>=C2=A0 &quot;artifacts&quot;: [</div><div>=C2=A0 =
+=C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;filename&quot;: &quot;Screens=
+hot_20260919_134306_com.opera.browser.jpg&quot;,</div><div>=C2=A0 =C2=A0 =
+=C2=A0 &quot;relative_path&quot;: &quot;evidence/Screenshot_20260919_134306=
+_com.opera.browser.jpg&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;size_byt=
+es&quot;: 460692,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;sha256&quot;: &quot;=
+dfeae31cb36ea445b9798775fd4534e31483dbcd8516821ecff225c4b5a1fc78&quot;</div=
+><div>=C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =
+=C2=A0 &quot;filename&quot;: &quot;Screenshot_20260919_134312_com.opera.bro=
+wser.jpg&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;relative_path&quot;: &=
+quot;evidence/Screenshot_20260919_134312_com.opera.browser.jpg&quot;,</div>=
+<div>=C2=A0 =C2=A0 =C2=A0 &quot;size_bytes&quot;: 323672,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 &quot;sha256&quot;: &quot;d186b4efdd40e69acd1d52a62c4d9aa25b9=
+938d344ed55cdf6b83e0080b171c5&quot;</div><div>=C2=A0 =C2=A0 },</div><div>=
+=C2=A0 =C2=A0 {</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;filename&quot;: &quot;=
+Screenshot_20260919_135508_com.opera.browser.jpg&quot;,</div><div>=C2=A0 =
+=C2=A0 =C2=A0 &quot;relative_path&quot;: &quot;evidence/Screenshot_20260919=
+_135508_com.opera.browser.jpg&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;s=
+ize_bytes&quot;: 341963,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;sha256&quot;:=
+ &quot;2a242ddb5b6202191aad91171e576a91f856f988055dfb6a019fb2d3b5f650cc&quo=
+t;</div><div>=C2=A0 =C2=A0 },</div><div>=C2=A0 =C2=A0 {</div><div>=C2=A0 =
+=C2=A0 =C2=A0 &quot;filename&quot;: &quot;Screenshot_20260919_135514_com.op=
+era.browser.jpg&quot;,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;relative_path&q=
+uot;: &quot;evidence/Screenshot_20260919_135514_com.opera.browser.jpg&quot;=
+,</div><div>=C2=A0 =C2=A0 =C2=A0 &quot;size_bytes&quot;: 657326,</div><div>=
+=C2=A0 =C2=A0 =C2=A0 &quot;sha256&quot;: &quot;a5ba57ebe20861c9d9057d838815=
+98cda88cafd8e9f551c7aa93afb36cb9f512&quot;</div><div>=C2=A0 =C2=A0 }</div><=
+div>=C2=A0 ]</div><div>}</div>
+
+--0000000000003d4f2d065bef3921--
