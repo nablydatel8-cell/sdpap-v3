@@ -1,0 +1,2 @@
+ots stamp ANCHOR_PUBLIC_GREEN.txt
+ots verify
