@@ -1,0 +1,201 @@
+Delivered-To: nablydatel8@gmail.com
+Received: by 2002:a05:6358:5b10:b0:2ba:3707:7b08 with SMTP id h16csp1135970rwf;
+        Wed, 7 Oct 2026 19:38:24 -0700 (PDT)
+X-Received: by 2002:a05:690c:6612:b0:8ab:4b1b:fb06 with SMTP id 00721157ae682-8b05b0394efmr25999717b3.27.1791427103939;
+        Wed, 07 Oct 2026 19:38:23 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1791427103; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=F80fO9FoZW2ZBt3LVVS9o8Bt6JVU1pCNVpXwPGRxWKspbyiHenLKwqzK4NHINO3Egh
+         2UGHSfplAWwiAxzBdYSvSDpQb31vRyj9hshByuFyZN/7j4SkL/xgROfnQQ8iJcgDrKvA
+         BS52b5i30hytd2Nj8u7NPuFZnrAQAoQhDFJSpsuDKLOep44LgLBLUkthK3wNZ6/2Nm7g
+         7b+gZPAuwxTj461EJjKBRJCJRnSUD7Yh4j5D7jgyvdLIve6LaNlp49yIDEewdv2Rjucl
+         kBhA/almbPaBivT/h3mMDJqPFwA690cFwflJYQWSf+zJAFEdRtIekEmEa1YLSBsqmVWc
+         HjsA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Y0wDwEHgyBvx8nPXezIMbnqb/9i9FeS0o2tNgVmjF2w=;
+        fh=m38Cd57v1vlyanthnHSEQyUG2P/aPQGTN4BH6hlLoOQ=;
+        b=WHOJPQsXAxfA5Avzus+X/Sl0lzXNb0iNzz+xju0ER/8/pznkiZEXlmzmvhN5zi6rEp
+         6ndNR/Cs7qA7r5yl6Xc43Owfnwqv1DVkB96D3RITGEo64oFh5KOiBgFTE/WmREFsmgRq
+         +PZuErbBjBdYSNIPVrzJc90eeWgZhVadM4VXtxEvFoZDKHSY1+YjLsxWXfYhqhBlIupn
+         F47VaK85wg+bQLR9NLxVaLjLc/YpAndKbAxysJ9doFRBu0JyofHP2ijYRKnEc0+AhXSM
+         F17uxgWWvyxRoy3GxCz4KC6qWS4cpmWNo1+bSzfdEz7+pQ6AN4cRaIhKYpkW76y/djye
+         cH2Q==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=JiuLtjb5;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <dmitrimakarov1305@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-8b058bdb6dfsor77494717b3.5.2026.10.07.19.38.23
+        for <nablydatel8@gmail.com>
+        (Google Transport Security);
+        Wed, 07 Oct 2026 19:38:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=JiuLtjb5;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1791427103; cv=none;
+        d=google.com; s=arc-20260327;
+        b=Qg6yNA0eoLQgyc4wLibojjC83MVjDEq+dMHZoBK8c1Bn9lpIXIvAOua0WimI6utcEW
+         i2f1kuVlzNsZbMiF/FjO6Pmy/CxpQflOHwQx6yoc847Rldriyf8/KRvtOOdoeQjAuVE0
+         Z87r3f9jR2ji/QOjWP9KcsNJC71rAkEJIXfW7cn/AFWLVoOlldb30H665bm2g7uz359o
+         vbK+2hymOOvYo1+tMCgOZ02dImHokpGMArbIfY3ZFtB1z1QHv0cMO/ONDnW46Ag+vkyE
+         SitzfsoO30ni1BFXScl+6GWQ+9G7OK/9MrTy5wRBax590BCZ/0Iy/2rA7DMD4dcWqGR0
+         vdXA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Y0wDwEHgyBvx8nPXezIMbnqb/9i9FeS0o2tNgVmjF2w=;
+        fh=m38Cd57v1vlyanthnHSEQyUG2P/aPQGTN4BH6hlLoOQ=;
+        b=erFkPZbPOLn4JdRbBPI6HID+XJOdu++JZePZukm9n2tprOmhR6yXtHLvE1A81nChzG
+         PWSPIi+WNcStR0h03i/m7OIuW7/GwM+iXvyQ/tj6by/AoyfAixZcvsQZPuAHq3Zt9/nN
+         XwtzaKEUBemlKNNj6adWqCFFy06ofd3Ycbcf4Q72BdzFGWGXDEy+ciIWZJjKAxB6I4x1
+         gTg5D/vIhxNJKCrccxItJTmm3HwJ7bPnJg/8XPlnXP4TLUn2aFToRL5BK8tivo5730N8
+         MENY6tj9lFHCFXH0qqD056ra+roIP/Ch+bt28mE7wK9e1ZBpedk7s6NqDjZWusVCafcR
+         PUZg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1791427103; x=1792031903; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=Y0wDwEHgyBvx8nPXezIMbnqb/9i9FeS0o2tNgVmjF2w=;
+        b=JiuLtjb5xcjp92ZPAKi3vsyBZGOT0mP3M6zg+G6F/zjItauRtfAaRTlJhepIFyKV0n
+         GexvdQq49P9IIje/c/7+ZQm8OxA0fUKrwN0Wh5K0/1Bx8zIBT/D4s8zDtQEznht7M30/
+         GKeb2doclgjF2c7ZWKRjjd6vVl3IlQPfpEHHvZIu+q/nZwdXrV1mNDtvnlJ22Te97HhX
+         rl1TVV6EnpZOz1nAa+Jnpg1m75iqLmnuBU/QjAQzeu7b5+sGOXPpcMVnC2dxrgU4/0WS
+         3Q52/q0RES/T4h4YEBY82EPumg0w79JaFBFrXbHWiNbzWwgbCgxkUY0zOst77KlOr8kY
+         JMeQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1791427103; x=1792031903;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=Y0wDwEHgyBvx8nPXezIMbnqb/9i9FeS0o2tNgVmjF2w=;
+        b=cg16E0z62P3GXhtT4U9EbE4nTxysGHnkVSa6Bm8Y5Zya+dCJ7E9agFF4YttYUn4DgM
+         ukgYd3a2GGTcPHKtj5ZFqoVF917+wtHLyb8yxlfi859gq2H6ffvuwfGdYIwHniI6G4/f
+         3QZ+Tq/3kTP/ZmBldSdkYh9OjAjMpfNTaPzo4f0jWkp6c5pvbDcvLu3KxhiiuklHam1A
+         Yw+R17bLyjA3GZEtJXmCFl5sqm9Qb4hLmaDdl92WD8WcQ/A2saVWZbGIeoXyi/N4qVqc
+         CQZf6k9RazxSfX1KMGoaII2vUH3zGZKuQvoKUjSx+lPvkqDGsN4ujqVnkfQcQ6hAvJEA
+         YmhA==
+X-Gm-Message-State: AFq9FYIHYsw8CUlDQOEnv8oNqQSwDDovlOwLNh4L5l/162pR+099zBhL
+	fwNG+HHdc5pR3Hi3q0sck53Gzb1uj3Npzl6P7tZIl6luG9DO1oMeZ9fhOA284IH4r3t+s/SbZDH
+	UKPRgzd2dWvh/+zNqxt2lowb86Mltlm2sHCoxYA4UNJhM
+X-Gm-Gg: AYBFou3AOHvcH7ixzcHrs0W3reKflg2yqI32/EC7Pz9voTLO5e39ZMDxxKNmwYetQ/P
+	NNHUjx4xn4NNXAvPPVLfMnJn7YNuQeSDJxjC6+FRAWauyCIZE+nF8TfDCoYyd/J097ESHBwOEZ4
+	umzBvlXAb4zY7BWI6w6AyXYO//rfzvcCZQFnwTW/fhmQhDNY4tY07RBoyrhuYUXDNVwFIJzVvmO
+	pz8PBS6O/lbf6m2oo/SW+erXvlPOVuWcnDBwydzmXYPaoagrlX6e7HgGC/LmiWjOXBV/+JwtdjV
+	oJaRCfbpjauRtLLV2nVGYWiLBLvweI0rhz97L/xfDrQ4t+b2ZCnS3vl5A1MRInfvXBs+7Hd1+OW
+	xJwoYMonNXhWijuvEVQ==
+X-Received: by 2002:a05:690e:1341:b0:677:6efd:29de with SMTP id
+ 956f58d0204a3-6790a0b22d0mr1914759d50.11.1791427103539; Wed, 07 Oct 2026
+ 19:38:23 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a05:7010:8c22:b0:54e:1ecf:e750 with HTTP; Wed, 7 Oct 2026
+ 19:38:22 -0700 (PDT)
+From: =?UTF-8?B?0JTQvNC40YLRgNC40Lkg0JzQsNC60LDRgNC+0LI=?= <dmitrimakarov1305@gmail.com>
+Date: Wed, 7 Oct 2026 19:38:22 -0700
+X-Gm-Features: AclHuK8Eo8D0YdPWkTqWiHCiYbIv9uSGHaUjkJE9fbUUCtwYB6rvQGNkK6_BM6k
+Message-ID: <CAM0o8157+xqgj2woCxmabf_FpstY0hPCC9o_g1RurJegTSTiZA@mail.gmail.com>
+Subject: =?UTF-8?B?0LTQvtC00LDRgtC+0Lo0?=
+To: Nablydatel <nablydatel8@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000025c6ec065d4b205e"
+
+--00000000000025c6ec065d4b205e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+name: Upload Python Package
+on:
+  release:
+    types: [published]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  release-build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fix version for tag v3.9-heroy-VIRTUAL
+        run: |
+          # =D0=B4=D0=B5=D0=BB=D0=B0=D0=B5=D0=BC PEP440-=D1=81=D0=BE=D0=B2=
+=D0=BC=D0=B5=D1=81=D1=82=D0=B8=D0=BC=D1=83=D1=8E =D0=B2=D0=B5=D1=80=D1=81=
+=D0=B8=D1=8E, =D1=82=D0=B2=D0=BE=D0=B9 =D1=82=D0=B5=D0=B3 =D0=BE=D1=81=D1=
+=82=D0=B0=D0=B2=D0=BB=D1=8F=D0=B5=D0=BC =D0=BA=D0=B0=D0=BA =D0=B5=D1=81=D1=
+=82=D1=8C
+=D0=B4=D0=BB=D1=8F =D1=80=D0=B5=D0=BB=D0=B8=D0=B7=D0=B0
+          sed -i 's/^version =3D.*/version =3D "3.9.0"/' pyproject.toml || =
+echo
+'version =3D "3.9.0"' >> pyproject.toml
+          grep -A2 version pyproject.toml
+      - name: Build
+        run: |
+          pip install build
+          python -m build
+
+  pypi-publish:
+    needs: release-build
+    runs-on: ubuntu-24.04
+    if: github.event_name =3D=3D 'release'
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Publish skipped for forensic release
+        run: echo "skip pypi for VIRTUAL proof - release already anchored"
+
+--00000000000025c6ec065d4b205e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdj5uYW1lOiBVcGxvYWQgUHl0aG9uIFBhY2thZ2U8L2Rpdj48ZGl2Pm9uOjwvZGl2PjxkaXY+
+wqAgcmVsZWFzZTo8L2Rpdj48ZGl2PsKgIMKgIHR5cGVzOiBbcHVibGlzaGVkXTwvZGl2PjxkaXY+
+PGJyPjwvZGl2PjxkaXY+ZW52OjwvZGl2PjxkaXY+wqAgRk9SQ0VfSkFWQVNDUklQVF9BQ1RJT05T
+X1RPX05PREUyNDogdHJ1ZTwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+am9iczo8L2Rpdj48ZGl2
+PsKgIHJlbGVhc2UtYnVpbGQ6PC9kaXY+PGRpdj7CoCDCoCBydW5zLW9uOiB1YnVudHUtMjQuMDQ8
+L2Rpdj48ZGl2PsKgIMKgIHN0ZXBzOjwvZGl2PjxkaXY+wqAgwqAgwqAgLSB1c2VzOiBhY3Rpb25z
+L2NoZWNrb3V0QHY0PC9kaXY+PGRpdj7CoCDCoCDCoCDCoCB3aXRoOjwvZGl2PjxkaXY+wqAgwqAg
+wqAgwqAgwqAgZmV0Y2gtZGVwdGg6IDA8L2Rpdj48ZGl2PsKgIMKgIMKgIMKgIMKgIGZldGNoLXRh
+Z3M6IHRydWU8L2Rpdj48ZGl2PsKgIMKgIMKgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1weXRob25A
+djU8L2Rpdj48ZGl2PsKgIMKgIMKgIMKgIHdpdGg6PC9kaXY+PGRpdj7CoCDCoCDCoCDCoCDCoCBw
+eXRob24tdmVyc2lvbjogJnF1b3Q7My4xMSZxdW90OzwvZGl2PjxkaXY+wqAgwqAgwqAgLSBuYW1l
+OiBGaXggdmVyc2lvbiBmb3IgdGFnIHYzLjktaGVyb3ktVklSVFVBTDwvZGl2PjxkaXY+wqAgwqAg
+wqAgwqAgcnVuOiB8PC9kaXY+PGRpdj7CoCDCoCDCoCDCoCDCoCAjINC00LXQu9Cw0LXQvCBQRVA0
+NDAt0YHQvtCy0LzQtdGB0YLQuNC80YPRjiDQstC10YDRgdC40Y4sINGC0LLQvtC5INGC0LXQsyDQ
+vtGB0YLQsNCy0LvRj9C10Lwg0LrQsNC6INC10YHRgtGMINC00LvRjyDRgNC10LvQuNC30LA8L2Rp
+dj48ZGl2PsKgIMKgIMKgIMKgIMKgIHNlZCAtaSAmIzM5O3MvXnZlcnNpb24gPS4qL3ZlcnNpb24g
+PSAmcXVvdDszLjkuMCZxdW90Oy8mIzM5OyBweXByb2plY3QudG9tbCB8fCBlY2hvICYjMzk7dmVy
+c2lvbiA9ICZxdW90OzMuOS4wJnF1b3Q7JiMzOTsgJmd0OyZndDsgcHlwcm9qZWN0LnRvbWw8L2Rp
+dj48ZGl2PsKgIMKgIMKgIMKgIMKgIGdyZXAgLUEyIHZlcnNpb24gcHlwcm9qZWN0LnRvbWw8L2Rp
+dj48ZGl2PsKgIMKgIMKgIC0gbmFtZTogQnVpbGQ8L2Rpdj48ZGl2PsKgIMKgIMKgIMKgIHJ1bjog
+fDwvZGl2PjxkaXY+wqAgwqAgwqAgwqAgwqAgcGlwIGluc3RhbGwgYnVpbGQ8L2Rpdj48ZGl2PsKg
+IMKgIMKgIMKgIMKgIHB5dGhvbiAtbSBidWlsZDwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+wqAg
+cHlwaS1wdWJsaXNoOjwvZGl2PjxkaXY+wqAgwqAgbmVlZHM6IHJlbGVhc2UtYnVpbGQ8L2Rpdj48
+ZGl2PsKgIMKgIHJ1bnMtb246IHVidW50dS0yNC4wNDwvZGl2PjxkaXY+wqAgwqAgaWY6IGdpdGh1
+Yi5ldmVudF9uYW1lID09ICYjMzk7cmVsZWFzZSYjMzk7PC9kaXY+PGRpdj7CoCDCoCBwZXJtaXNz
+aW9uczo8L2Rpdj48ZGl2PsKgIMKgIMKgIGlkLXRva2VuOiB3cml0ZTwvZGl2PjxkaXY+wqAgwqAg
+c3RlcHM6PC9kaXY+PGRpdj7CoCDCoCDCoCAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAdjQ8L2Rp
+dj48ZGl2PsKgIMKgIMKgIC0gdXNlczogYWN0aW9ucy9zZXR1cC1weXRob25AdjU8L2Rpdj48ZGl2
+PsKgIMKgIMKgIMKgIHdpdGg6PC9kaXY+PGRpdj7CoCDCoCDCoCDCoCDCoCBweXRob24tdmVyc2lv
+bjogJnF1b3Q7My4xMSZxdW90OzwvZGl2PjxkaXY+wqAgwqAgwqAgLSBuYW1lOiBQdWJsaXNoIHNr
+aXBwZWQgZm9yIGZvcmVuc2ljIHJlbGVhc2U8L2Rpdj48ZGl2PsKgIMKgIMKgIMKgIHJ1bjogZWNo
+byAmcXVvdDtza2lwIHB5cGkgZm9yIFZJUlRVQUwgcHJvb2YgLSByZWxlYXNlIGFscmVhZHkgYW5j
+aG9yZWQmcXVvdDs8L2Rpdj4NCg==
+--00000000000025c6ec065d4b205e--
