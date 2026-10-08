@@ -1,0 +1,290 @@
+Delivered-To: nablydatel8@gmail.com
+Received: by 2002:a05:6358:5b10:b0:2ba:3707:7b08 with SMTP id h16csp1062721rwf;
+        Wed, 7 Oct 2026 18:10:37 -0700 (PDT)
+X-Received: by 2002:a05:690c:c6c3:b0:8a8:6fac:21ac with SMTP id 00721157ae682-8b05af18232mr19293607b3.8.1791421837629;
+        Wed, 07 Oct 2026 18:10:37 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1791421837; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=XG3fdmK1q5gSTjGDiQCMtyPtX72mVdrJH/FlsPGdAsrCMTZw9VUOLXffXN+qsAJgE+
+         /qlWgRJnMhTsErOiKavanRhl53eF8OyURz6pd1VFX68yW77fEZ4me4jhcTLoV76pyM3z
+         bBLh2cnEGWOaSIvWmzXJw4w5mIOFGc9MmKM+HKAsYxwdPKiFDizRw/sQqwMajcO/DaqG
+         Hu1ovy9f8K77D3uK8MoqS3gY14cO6JczkCSzt/6kh6cfZmgdJYnBnHM1zRzDIL1ZR6cw
+         zoJkeHznmumz7fZctlbjRyb9s3qYCi3z3Upxw43/rb8ADr4ewgRqW4T43TJfBaCtN01d
+         FDcA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=zdGQDJlnWdGL+WDNKR9s1td4t3ExQHB00NEvVgVOvt4=;
+        fh=m38Cd57v1vlyanthnHSEQyUG2P/aPQGTN4BH6hlLoOQ=;
+        b=HaNOY5V7OiqiMSH5j+iVUNPWbw9gaTDBfmTj1GEZIlrlGo85y9Zmdd/Fomax5XWG89
+         3iviLfRowuwbJATgccoB5DheYiS2PE4lSvs9VRHXoO7B+nCxV88RVvzqCeFXLhLbPUah
+         qep/NIxRjTg0rcZq//oJrqbxFvlUu8mC5QYtptMjgYJEUE4bLMPFDEs6epUIBqicww0c
+         CWMkeson2Reg0AxjYTrJl0Fi6yUDymLHXBJeIRrwBZG7duHPW6YWiecIbZAoiBbpDjjh
+         1bfYDqjE8arfvEwSzxLVqloULDaT9R6jtKes7mZ3pQ8/uVdJu86Aiw14qzJ6s3Wchvf/
+         IeSQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Qh9GoC0q;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <dmitrimakarov1305@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-8b0590c3790sor68950147b3.9.2026.10.07.18.10.37
+        for <nablydatel8@gmail.com>
+        (Google Transport Security);
+        Wed, 07 Oct 2026 18:10:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=Qh9GoC0q;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of dmitrimakarov1305@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dmitrimakarov1305@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1791421837; cv=none;
+        d=google.com; s=arc-20260327;
+        b=UA7v0wpa8d6GahGvpC2DL8ERoTJpF6HqIu3nE6j+lX+QOUZlYla4kiCk5GUx3bszOP
+         XIsGeZIFZxpKPfcdhHDuUUyNkOguOIzeDORDtl68n2pzbZ6TtRv2tDjLBvR0nHlwMwXb
+         lhM9FNT1p0+rCGi8YX1/mda3EoRnq2Zr332Nipi2MvNl5+ucpFHRFPx/VT/q22o8YMCv
+         UhL2yKfLBkL6r3UdFvKx51/pAfTe98sjm2DavBwufaSpuNHFraU3KYkKX1KFZt3/jIHp
+         WyNpI5e7BNZeUSrTUY3A6VUKpTnMCyVEIjUTc0c85l+TCk8cLhVdJbdwmguIbpk5mzn+
+         Ta1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=zdGQDJlnWdGL+WDNKR9s1td4t3ExQHB00NEvVgVOvt4=;
+        fh=m38Cd57v1vlyanthnHSEQyUG2P/aPQGTN4BH6hlLoOQ=;
+        b=W0l4jYKomTavaKRaxXWT1vVrGqLBEk/ax2Ix7xFjmIaG1IWy2V3fFk9UKOlUGKY//V
+         +vCZ8/3wx7afCXs1kBBWvElBgqDjQOZGriHzYkVYoxHwO1AoDAFIsRw/cZbODTDfMSeX
+         EhSBec4/dVsJkIC+LFmtAN7Poci8hJkaiw7ZvddoMwyvGq/V1td5xN/iiZ8nU+AMw9k8
+         FcW47Xcq0f1is0PDokxEaYTdn1XTwPrF/xqSA1rREydrE/rIfKk0ngS8A8Fvho+nYp9x
+         qrGiHoDhsh8DBWhSiZjZGduZqMrHcyTBdlyZC7GqQPCftFZ397oDj9tq2hDSezw2aKCH
+         tn9w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1791421837; x=1792026637; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=zdGQDJlnWdGL+WDNKR9s1td4t3ExQHB00NEvVgVOvt4=;
+        b=Qh9GoC0qy4BR/a5sFprpua0zVFtQMfSkJOJj5Y+k46+dxw2qCP0ipHKKOuTs7GNAa6
+         EgJjn9te9gaiLovFFjrFmJDbgjMhm3b6rXmNebsSZBPp8aPSQbeLcYSgJaLHRXWv9IPv
+         Pix9pDkgs/g1rqd+0jZdOGXXr0Po7uFraGQVm7O9TvnBT7o8NHxL5rZHmD4YhQu0Ix/K
+         CmkgTsLSYUwdLMdz9G+j4+py3rKbI8w/7H0NAlYXivVQiVFpUV/NriTmsfH3IBdWBd4q
+         vQOoON0OkIcQAlSXr/sbJEB5+a7AJhTIdPctvo10i7GoYstjOlPLlnVH9bute6IUvTKc
+         caPA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1791421837; x=1792026637;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=zdGQDJlnWdGL+WDNKR9s1td4t3ExQHB00NEvVgVOvt4=;
+        b=OvOppj6zraT4PFhaqgUGsdr65rNKVbORWD5R3UZuZlLAATLMVPx2OwQcAoDPg3rUia
+         BKsCvzaCSeuLaiKvMoS7JjVtlz7yYbmvUVj3YcNsOFiLZMWNYJiX9+wJq8GpME4PkojM
+         n45EO8/eo4gIKCWiR5ZUSa6BlaqeqPauFf3Ys353KehZk7R7Z3NhE9Nigty6r34kP7+T
+         f8vpZHdVrjYbqjvorHOllDpSZQPSJCQU65zOnWBbJFB/Q//8kabRUJ0NgXDqag7kyhFe
+         Xf0sh/6cEqDygBXg/jR85YGdocVYbeprgsThny1UZ/oBPko/Xevup4kpJH3oa5CIp5qJ
+         s1Iw==
+X-Gm-Message-State: AFq9FYL7gAv9oInuMR1Sl6RhsLxvoCBryLUA/q/6q238V9myUPyIYv/V
+	svpyMgHUHVBaGSDBeau/UkXtuvM7aLcKnuHi14Vw9kod5s7cGheeEQYcimOMzseNwL3RLbcoMil
+	/Hi/mdyVtKCp9/bjYFQ41lEmKtUQ4G+mck7Rdl112fbuX
+X-Gm-Gg: AYBFou1hn/haIp2a+sQrYjjO5/6EO4BZ+yPUNNpf0DJFp1nhp/9/lPytD6Ja+YExeSO
+	5zTDE9fSn1hofqsaPKSfhJLNE5ZATL6CZ9nBiqCnkUJ97oUc0QSwN6rq7zSrC+u5dB8wd47DNFc
+	pQPSkXVm8txyBu5txVcREqq9TdEaLrqcbZ4P1GktXdr/Y0FbkH7pT9Qls5863RYT38GNK9eKN5c
+	HquMwphtjb2YPmHfWR8JuJvokFEn6xJSZpXhDo5n1yltlDdNPIcxjUJghjiWMEBF0cqOLPOTBf/
+	n9rqz944fmH/laOk2WxzC8AThaga/G4uyFdbApH4yOUrcR+HDmembg96QyaG7FOwMfDMm93fmtM
+	PD3O0oofnpCZbIj+DENm1
+X-Received: by 2002:a05:690c:e3eb:b0:89a:63bc:8c0 with SMTP id
+ 00721157ae682-8b05b15f776mr23834557b3.74.1791421837221; Wed, 07 Oct 2026
+ 18:10:37 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a05:7010:33c6:b0:54d:f762:679e with HTTP; Wed, 7 Oct 2026
+ 18:10:35 -0700 (PDT)
+From: =?UTF-8?B?0JTQvNC40YLRgNC40Lkg0JzQsNC60LDRgNC+0LI=?= <dmitrimakarov1305@gmail.com>
+Date: Wed, 7 Oct 2026 18:10:35 -0700
+X-Gm-Features: AclHuK_CN5PGmHGjkOcYDXT-5VbTEh88ic29LDvoTqJFY8jIAfFH10NAUKmHymQ
+Message-ID: <CAM0o814xh-nkaUTHc-3mP+YrEYoqVf=DLFh-C5Q6uBXB7SYEaA@mail.gmail.com>
+Subject: sdpapv3,9
+To: Nablydatel <nablydatel8@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000402414065d49e657"
+
+--000000000000402414065d49e657
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+SDPAP v3 - Public Money Public Proof
+Idea: Vadim Makarov - Public Domain Gift
+License: MIT + EUPL-1.2
+
+EVIDENCE
+48 - =D0=BA=D0=B0=D0=BD=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=D1=86=D0=B8=D1=8F - =
+=D0=BF=D0=BE =D1=89=D0=B8=D0=BA=D0=BE=D0=BB=D0=BE=D1=82=D0=BA=D1=83 - =D1=
+=85=D0=B5=D1=88: cd36560d...
+PROMISE: MOWI HEROY 2 =D0=BB=D0=BE=D1=81=D0=BE=D1=81=D1=8F =D0=B2 =D1=81=D0=
+=B5=D0=BA=D1=83=D0=BD=D0=B4=D1=83
+FACT: =D0=9B=D0=BE=D1=81=D0=BE=D1=81=D1=8C =D0=92=D0=98=D0=A0=D0=A2=D0=A3=
+=D0=90=D0=9B=D0=AC=D0=9D=D0=AB=D0=99 / =D0=91=D0=A3=D0=9C=D0=90=D0=96=D0=9D=
+=D0=AB=D0=99, =D0=92 =D0=A0=D0=95=D0=90=D0=9B=D0=AC=D0=9D=D0=9E=D0=A1=D0=A2=
+=D0=98 0. Herb=C3=B8 =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=BB=D0=B8=D1=
+=86=D0=B5=D0=BD=D0=B7=D0=B8=D1=8F
+=D0=BE=D1=82 Arbeiderpartiet
+
+--- log.py ---
+import sqlite3, hashlib, time, pathlib
+DB=3Dpathlib.Path("audit.db")
+def init_db():
+ con=3Dsqlite3.connect(DB)
+ con.execute("CREATE TABLE IF NOT EXISTS log (id INTEGER PRIMARY KEY, ts
+TEXT, type TEXT, data_hash TEXT, data_preview TEXT, prev_hash TEXT,
+entry_hash TEXT)")
+ con.execute("CREATE TRIGGER IF NOT EXISTS forbid_update BEFORE UPDATE ON
+log BEGIN SELECT RAISE(FAIL,'UPDATE forbidden'); END;")
+ con.execute("CREATE TRIGGER IF NOT EXISTS forbid_delete BEFORE DELETE ON
+log BEGIN SELECT RAISE(FAIL,'DELETE forbidden'); END;")
+ con.commit(); con.close()
+def add_entry(t,d,p=3D""):
+ init_db(); h=3Dhashlib.sha256(d).hexdigest();
+ts=3Dtime.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())
+ con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()
+ cur.execute("SELECT entry_hash FROM log ORDER BY id DESC LIMIT 1");
+r=3Dcur.fetchone(); ph=3Dr[0] if r else "0"*64
+ eh=3Dhashlib.sha256(f"{ph}|{t}|{h}|{ts}".encode()).hexdigest()
+ cur.execute("INSERT INTO log
+(ts,type,data_hash,data_preview,prev_hash,entry_hash) VALUES
+(?,?,?,?,?,?)",(ts,t,h,p[:200],ph,eh))
+ con.commit(); con.close(); return eh
+
+--- promise.py ---
+import sys
+from log import add_entry
+txt=3D" ".join(sys.argv[1:]) if len(sys.argv)>1 else "PROMISE"
+add_entry("PROMISE",txt.encode(),txt)
+
+--- ingest.py ---
+import sys,pathlib
+from log import add_entry
+a=3Dsys.argv[1]; p=3Dpathlib.Path(a)
+d=3Dp.read_bytes() if p.exists() and p.is_file() else a.encode()
+pr=3Df"FILE:{p.name}" if p.exists() else a
+add_entry("FACT",d,pr)
+
+--- verify.py ---
+import sqlite3,hashlib,pathlib
+DB=3Dpathlib.Path("audit.db")
+def verify():
+ con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()
+ cur.execute("SELECT ts,type,data_hash,prev_hash,entry_hash FROM log ORDER
+BY id")
+ rows=3Dcur.fetchall(); prev=3D"0"*64; ok=3DTrue
+ for ts,typ,dh,ph,eh in rows:
+  if ph!=3Dprev: ok=3DFalse
+  if hashlib.sha256(f"{ph}|{typ}|{dh}|{ts}".encode()).hexdigest()!=3Deh:
+ok=3DFalse
+  prev=3Deh
+ con.close(); print("OK" if ok else "FAIL"); return ok
+if __name__=3D=3D"__main__": verify()
+
+--- anchor.py ---
+import sqlite3,pathlib
+DB=3Dpathlib.Path("audit.db")
+con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()
+cur.execute("SELECT entry_hash FROM log ORDER BY id DESC LIMIT 1");
+r=3Dcur.fetchone(); con.close()
+h=3Dr[0] if r else ""
+pathlib.Path("anchor.txt").write_text(f"LAST_ENTRY_HASH=3D{h}\n")
+
+--- dashboard/app.py ---
+from flask import Flask,render_template_string
+import sqlite3,pathlib
+app=3DFlask(__name__); DB=3Dpathlib.Path("../audit.db")
+HTML=3D"<h1>SDPAP v3</h1><table border=3D1>{% for r in rows
+%}<tr><td>{{r[0]}}</td><td>{{r[1]}}</td><td>{{r[2]}}</td><td>{{r[3]}}</td><=
+/tr>{%
+endfor %}</table>"
+@app.route("/")
+def index():
+ rows=3D[]
+ if DB.exists():
+  con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()
+  cur.execute("SELECT id,ts,type,data_preview FROM log ORDER BY id DESC
+LIMIT 100"); rows=3Dcur.fetchall(); con.close()
+ return render_template_string(HTML,rows=3Drows)
+if __name__=3D=3D"__main__": app.run(port=3D5000)
+
+--- requirements.txt ---
+flask
+
+--000000000000402414065d49e657
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div>SDPAP v3 - Public Money Public Proof</div><div>Idea: Vadim Makarov - P=
+ublic Domain Gift</div><div>License: MIT + EUPL-1.2</div><div><br></div><di=
+v>EVIDENCE</div><div>48 - =D0=BA=D0=B0=D0=BD=D0=B0=D0=BB=D0=B8=D0=B7=D0=B0=
+=D1=86=D0=B8=D1=8F - =D0=BF=D0=BE =D1=89=D0=B8=D0=BA=D0=BE=D0=BB=D0=BE=D1=
+=82=D0=BA=D1=83 - =D1=85=D0=B5=D1=88: cd36560d...</div><div>PROMISE: MOWI H=
+EROY 2 =D0=BB=D0=BE=D1=81=D0=BE=D1=81=D1=8F =D0=B2 =D1=81=D0=B5=D0=BA=D1=83=
+=D0=BD=D0=B4=D1=83</div><div>FACT: =D0=9B=D0=BE=D1=81=D0=BE=D1=81=D1=8C =D0=
+=92=D0=98=D0=A0=D0=A2=D0=A3=D0=90=D0=9B=D0=AC=D0=9D=D0=AB=D0=99 / =D0=91=D0=
+=A3=D0=9C=D0=90=D0=96=D0=9D=D0=AB=D0=99, =D0=92 =D0=A0=D0=95=D0=90=D0=9B=D0=
+=AC=D0=9D=D0=9E=D0=A1=D0=A2=D0=98 0. Herb=C3=B8 =D1=82=D0=BE=D0=BB=D1=8C=D0=
+=BA=D0=BE =D0=BB=D0=B8=D1=86=D0=B5=D0=BD=D0=B7=D0=B8=D1=8F =D0=BE=D1=82 Arb=
+eiderpartiet</div><div><br></div><div>--- log.py ---</div><div>import sqlit=
+e3, hashlib, time, pathlib</div><div>DB=3Dpathlib.Path(&quot;audit.db&quot;=
+)</div><div>def init_db():</div><div>=C2=A0con=3Dsqlite3.connect(DB)</div><=
+div>=C2=A0con.execute(&quot;CREATE TABLE IF NOT EXISTS log (id INTEGER PRIM=
+ARY KEY, ts TEXT, type TEXT, data_hash TEXT, data_preview TEXT, prev_hash T=
+EXT, entry_hash TEXT)&quot;)</div><div>=C2=A0con.execute(&quot;CREATE TRIGG=
+ER IF NOT EXISTS forbid_update BEFORE UPDATE ON log BEGIN SELECT RAISE(FAIL=
+,&#39;UPDATE forbidden&#39;); END;&quot;)</div><div>=C2=A0con.execute(&quot=
+;CREATE TRIGGER IF NOT EXISTS forbid_delete BEFORE DELETE ON log BEGIN SELE=
+CT RAISE(FAIL,&#39;DELETE forbidden&#39;); END;&quot;)</div><div>=C2=A0con.=
+commit(); con.close()</div><div>def add_entry(t,d,p=3D&quot;&quot;):</div><=
+div>=C2=A0init_db(); h=3Dhashlib.sha256(d).hexdigest(); ts=3Dtime.strftime(=
+&quot;%Y-%m-%dT%H:%M:%SZ&quot;,time.gmtime())</div><div>=C2=A0con=3Dsqlite3=
+.connect(DB); cur=3Dcon.cursor()</div><div>=C2=A0cur.execute(&quot;SELECT e=
+ntry_hash FROM log ORDER BY id DESC LIMIT 1&quot;); r=3Dcur.fetchone(); ph=
+=3Dr[0] if r else &quot;0&quot;*64</div><div>=C2=A0eh=3Dhashlib.sha256(f&qu=
+ot;{ph}|{t}|{h}|{ts}&quot;.encode()).hexdigest()</div><div>=C2=A0cur.execut=
+e(&quot;INSERT INTO log (ts,type,data_hash,data_preview,prev_hash,entry_has=
+h) VALUES (?,?,?,?,?,?)&quot;,(ts,t,h,p[:200],ph,eh))</div><div>=C2=A0con.c=
+ommit(); con.close(); return eh</div><div><br></div><div>--- promise.py ---=
+</div><div>import sys</div><div>from log import add_entry</div><div>txt=3D&=
+quot; &quot;.join(sys.argv[1:]) if len(sys.argv)&gt;1 else &quot;PROMISE&qu=
+ot;</div><div>add_entry(&quot;PROMISE&quot;,txt.encode(),txt)</div><div><br=
+></div><div>--- ingest.py ---</div><div>import sys,pathlib</div><div>from l=
+og import add_entry</div><div>a=3Dsys.argv[1]; p=3Dpathlib.Path(a)</div><di=
+v>d=3Dp.read_bytes() if p.exists() and p.is_file() else a.encode()</div><di=
+v>pr=3Df&quot;FILE:{<a href=3D"http://p.name">p.name</a>}&quot; if p.exists=
+() else a</div><div>add_entry(&quot;FACT&quot;,d,pr)</div><div><br></div><d=
+iv>--- verify.py ---</div><div>import sqlite3,hashlib,pathlib</div><div>DB=
+=3Dpathlib.Path(&quot;audit.db&quot;)</div><div>def verify():</div><div>=C2=
+=A0con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()</div><div>=C2=A0cur.execut=
+e(&quot;SELECT ts,type,data_hash,prev_hash,entry_hash FROM log ORDER BY id&=
+quot;)</div><div>=C2=A0rows=3Dcur.fetchall(); prev=3D&quot;0&quot;*64; ok=
+=3DTrue</div><div>=C2=A0for ts,typ,dh,ph,eh in rows:</div><div>=C2=A0 if ph=
+!=3Dprev: ok=3DFalse</div><div>=C2=A0 if hashlib.sha256(f&quot;{ph}|{typ}|{=
+dh}|{ts}&quot;.encode()).hexdigest()!=3Deh: ok=3DFalse</div><div>=C2=A0 pre=
+v=3Deh</div><div>=C2=A0con.close(); print(&quot;OK&quot; if ok else &quot;F=
+AIL&quot;); return ok</div><div>if __name__=3D=3D&quot;__main__&quot;: veri=
+fy()</div><div><br></div><div>--- anchor.py ---</div><div>import sqlite3,pa=
+thlib</div><div>DB=3Dpathlib.Path(&quot;audit.db&quot;)</div><div>con=3Dsql=
+ite3.connect(DB); cur=3Dcon.cursor()</div><div>cur.execute(&quot;SELECT ent=
+ry_hash FROM log ORDER BY id DESC LIMIT 1&quot;); r=3Dcur.fetchone(); con.c=
+lose()</div><div>h=3Dr[0] if r else &quot;&quot;</div><div>pathlib.Path(&qu=
+ot;anchor.txt&quot;).write_text(f&quot;LAST_ENTRY_HASH=3D{h}\n&quot;)</div>=
+<div><br></div><div>--- dashboard/app.py ---</div><div>from flask import Fl=
+ask,render_template_string</div><div>import sqlite3,pathlib</div><div>app=
+=3DFlask(__name__); DB=3Dpathlib.Path(&quot;../audit.db&quot;)</div><div>HT=
+ML=3D&quot;&lt;h1&gt;SDPAP v3&lt;/h1&gt;&lt;table border=3D1&gt;{% for r in=
+ rows %}&lt;tr&gt;&lt;td&gt;{{r[0]}}&lt;/td&gt;&lt;td&gt;{{r[1]}}&lt;/td&gt=
+;&lt;td&gt;{{r[2]}}&lt;/td&gt;&lt;td&gt;{{r[3]}}&lt;/td&gt;&lt;/tr&gt;{% en=
+dfor %}&lt;/table&gt;&quot;</div><div>@app.route(&quot;/&quot;)</div><div>d=
+ef index():</div><div>=C2=A0rows=3D[]</div><div>=C2=A0if DB.exists():</div>=
+<div>=C2=A0 con=3Dsqlite3.connect(DB); cur=3Dcon.cursor()</div><div>=C2=A0 =
+cur.execute(&quot;SELECT id,ts,type,data_preview FROM log ORDER BY id DESC =
+LIMIT 100&quot;); rows=3Dcur.fetchall(); con.close()</div><div>=C2=A0return=
+ render_template_string(HTML,rows=3Drows)</div><div>if __name__=3D=3D&quot;=
+__main__&quot;: app.run(port=3D5000)</div><div><br></div><div>--- requireme=
+nts.txt ---</div><div>flask</div>
+
+--000000000000402414065d49e657--
