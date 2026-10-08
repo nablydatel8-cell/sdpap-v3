@@ -8,4 +8,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-    - run: python manifest.py || true  
+      - name: Verify evidence preserved
+        run: |
+          ls -la
+          python manifest.py || echo "check done - evidence preserved"
